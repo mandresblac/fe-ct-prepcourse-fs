@@ -5,6 +5,8 @@ function obtenerMayor(x, y) {
    // Retornar el número más grande.
    // Si son iguales, retornar cualquiera de los dos.
    // Tu código:
+
+   // Opcion 1 de respuesta
    if (x > y) {
       return x;
    } else if (y > x) {
@@ -12,6 +14,11 @@ function obtenerMayor(x, y) {
    } else {
       return x;
    }
+
+   // Opcion 2 de respuesta
+   // if(x === y) return y;
+   // else if (x > y) return x;
+   // else return y;
 }
 
 function mayoriaDeEdad(edad) {
@@ -27,13 +34,22 @@ function conection(status) {
    // Si el estado es igual a 2, el usuario está "Away".
    // De lo contrario, presumimos que el usuario está "Offline".
    // Retornar el estado de conexión del usuario.
-   if (status === 1) {
-      return "Online";
-   } else if (status === 2) {
-      return "Away";
-   } else {
-      return "Offline";
-   }
+   
+   // Opcion 1 de respuesta
+   /* if (status === 1) return "Online";
+   else if (status === 2) return "Away";
+   else return "Offline"; */
+
+   // Opcion 2 de respuesta
+   switch (status) {
+      case 1:
+         return "Online";
+         // no se necesita el "break" porque el return corta la ejecución del switvh
+      case 2:
+         return "Away";
+      default:
+         return "Offline";
+   };
 }
 
 function saludo(idioma) {
@@ -42,7 +58,9 @@ function saludo(idioma) {
    // Si "idioma" es "mandarin", devuelve "Ni Hao!".
    // Si "idioma" es "ingles", devuelve "Hello!".
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
-   if (idioma === "aleman") {
+   
+   // Opcion 1 de respuesta
+   /* if (idioma === "aleman") {
       return "Guten Tag!";
    } else if (idioma === "mandarin") {
       return "Ni Hao!";
@@ -52,6 +70,18 @@ function saludo(idioma) {
       return "Hola!";
    } else {
       return "Hola!";
+   } */
+
+   // Opcion 2 de respuesta
+   switch (idioma) {
+      case 'aleman':
+         return "Guten Tag!";
+      case 'mandarin':
+         return "Ni Hao!";
+      case 'ingles':
+         return "Hello!";
+      default:
+         return "Hola!";
    }
 }
 
@@ -66,17 +96,14 @@ function colors(color) {
    // Tu código:
    switch (color) {
       case "blue":
-         return "This is blue"; 
-         break;
+         return "This is blue";
+         // no se necesita el "break" porque el return corta automaticamente la ejecución del switvh
       case "red":
          return "This is red"; 
-         break;
       case "green":
          return "This is green"; 
-         break;
       case "orange":
-         return "This is orange"; 
-         break;
+         return "This is orange";
       default:
          return "Color not found"; 
    }
@@ -101,11 +128,16 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-   if (num === parseInt(num)) {
-      return true;
-   } else {
-      return false;
-   }
+
+   // Opcion 1 de respuesta
+   // if (num === parseInt(num)) {
+   //    return true;
+   // } else {
+   //    return false;
+   // }
+
+   // Opcion 2 de respuesta
+   return (num === parseInt(num)) ? true : false;
 }
 
 function fizzBuzz(num) {
@@ -155,15 +187,11 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
-   if (num <= 1) {
-      return false;
-   }
+   if (num <=  0 || num === 1) return false;
 
    // Verificar si el número es divisible por cualquier número entre 2 y la mitad de él
-   for (let i = 2; i < num / 2; i++) {
-      if (num % i === 0) {
-         return false;
-      };
+   for (let i = 2; i < num; i++) {
+      if (num % i === 0) return false;
    }
 
    return true;
@@ -173,16 +201,14 @@ function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
-   if (valor) {
-      return "Soy verdadero";
-   } else {
-      return "Soy falso"
-   }
+   if (valor) return "Soy verdadero";
+   else return "Soy falso";
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
+   // Nota: A los numbers no se les puede aplicar la propiedad length
    // Tu código:
    return (num >= 100 && num <= 999) ? true : false;
 }
