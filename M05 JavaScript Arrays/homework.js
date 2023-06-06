@@ -34,7 +34,13 @@ function agregarItemAlFinalDelArray(array, elemento) {
    // Agrega el "elemento" al final del arreglo recibido.
    // Retorna el arreglo.
    // Tu código:
-   array.push(elemento);
+   
+   // Opcion 1 de respuesta
+   // array.push(elemento);
+   // return array;
+
+   // Opcion 2 de respuesta
+   array[array.length] = elemento;
    return array;
 }
 
@@ -60,6 +66,7 @@ function arrayContiene(array, elemento) {
    // Retornar true si está, o false si no está.
    // Tu código:
    return array.some( e => e === elemento);
+   // No es con includes sino con some
 }
 
 function agregarNumeros(arrayOfNums) {
@@ -82,7 +89,16 @@ function numeroMasGrande(arrayOfNums) {
    // El parámetro "arrayOfNums" es un arreglo de números.
    // Retornar el número más grande.
    // Tu código:
+
+   // Opcion 1 de respuesta
    return Math.max(...arrayOfNums);
+
+   // Opcion 2 de respuesta
+   //  let max = 0
+   //  for (let i = 0; i < arrayOfNums.length; i++) {
+   //    if (arrayOfNums[i] > max) max  = arrayOfNums[i];
+   //  }
+   //  return max;
 }
 
 function multiplicarArgumentos() {
@@ -92,9 +108,8 @@ function multiplicarArgumentos() {
    // Tu código:
 
    // Primero, se verifica si no se pasaron argumentos (arguments.length === 0). En ese caso, la función retorna 0, ya que no hay valores para multiplicar.
-   if (arguments.length === 0) {
-      return 0;
-   } else if (arguments.length === 1) {
+   if (arguments.length === 0) return 0;
+   else if (arguments.length === 1) {
       // Luego, se verifica si se pasó un único argumento (arguments.length === 1). En ese caso, la función retorna ese único argumento (arguments[0]), ya que no es necesario realizar ninguna operación de multiplicación.
       return arguments[0];
    } else {
@@ -121,11 +136,8 @@ function diaDeLaSemana(numeroDeDia) {
    // Realiza una función que, dado el número del día de la semana, retorne: "Es fin de semana"
    // si el día corresponde a "Sábado" o "Domingo", y "Es dia laboral" en caso contrario.
    // Tu código:
-   if (numeroDeDia === 1 || numeroDeDia === 7) {
-      return "Es fin de semana";
-   } else if (numeroDeDia >= 2 || numeroDeDia <= 6) {
-      return "Es dia laboral";
-   };
+   if (numeroDeDia === 1 || numeroDeDia === 7) return "Es fin de semana";
+   else if (numeroDeDia >= 2 || numeroDeDia <= 6) return "Es dia laboral";
 }
 
 function empiezaConNueve(num) {
