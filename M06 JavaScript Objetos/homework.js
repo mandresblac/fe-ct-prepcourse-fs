@@ -67,9 +67,7 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
-
-   //return objetoUsuario['email'] !== undefined ? true : false;
-   if (objetoUsuario['email'] !== undefined) return true;
+   if (objetoUsuario.email) return true;
    return false;
 }
 
@@ -84,7 +82,13 @@ function verificarPassword(objetoUsuario, password) {
    // Verifica si la propiedad "password" del "objetoUsuario" coincide con el parámetro "password".
    // En ese caso retornar true. Caso contrario, false.
    // Tu código:
+
+   // Opcion 1 respuesta
    return objetoUsuario['password'] === password;
+
+   // Opcion 2 respuesta
+   // if (objetoUsuario.password === password) return true;
+   // return false;
 }
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
@@ -111,8 +115,16 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como true.
    // Retornar el arreglo.
    // Tu código:
+
+   // Opcion 1 de respuesta
    objetoMuchosUsuarios.forEach(element => element.esPremium = true);
    return objetoMuchosUsuarios;
+
+   // Opcion 2 de respuesta
+   // for (let i = 0; i < objetoMuchosUsuarios.length; i++) {
+   //    objetoMuchosUsuarios[i].esPremium = true;
+   // }
+   // return objetoMuchosUsuarios;
 }
 
 function sumarLikesDeUsuario(objetoUsuario) {
@@ -121,9 +133,19 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // Cada post posee una propiedad llamada "likes". Esta propiedad es un número.
    // Debes sumar los likes de todos los post y retornar el resultado.
    // Tu código:
-   return objetoUsuario.posts.map(element => {
-      console.log(element.likes)
-   });
+
+   // Opcion 1 de respuesta
+   // let resultadoLikes = 0;
+   // for (let i = 0; i < objetoUsuario.posts.length; i++) {
+   //    resultadoLikes += objetoUsuario.posts[i].likes;
+   // }
+   // return resultadoLikes;
+
+   // Opcion 2 de respuesta
+   let resultadoLikes = objetoUsuario.posts.reduce((acumulador, post) => {
+      return acumulador + post.likes;
+   }, 0);
+   return resultadoLikes;
 }
 
 function agregarMetodoCalculoDescuento(objetoProducto) {
@@ -137,6 +159,11 @@ function agregarMetodoCalculoDescuento(objetoProducto) {
    // PorcentajeDeDescuento ---> 0.2
    // Precio final ---> 8
    // Tu código:
+   objetoProducto.calcularPrecioDescuento = function() {
+      return this.precio - (this.precio * this.porcentajeDeDescuento);
+   }
+
+   return objetoProducto;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
