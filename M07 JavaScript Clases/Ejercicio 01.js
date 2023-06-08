@@ -10,18 +10,46 @@ function crearUsuario() {
    // El valor {{nombre}} debe ser el nombre definido para la instancia de la clase.
    // Retornar la clase.
    // Tu código:
+   class Usuario {
+      constructor(usuario, nombre, email, password) {
+         this.usuario = usuario;
+         this.nombre = nombre;
+         this.email = email;
+         this.password = password;
+      }
+
+      saludar() {
+         return `Hola, mi nombre es ${this.nombre}`
+      }
+   }
+
+   return Usuario;
 }
 
 function agregarMetodoPrototype(Usuario) {
    // Agrega un método al prototipo de "Usuario".
    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
    // Tu código:
+   Usuario.prototype.saludar = function() {
+      return "Hello World!";
+   };
 }
 
 function agregarStringInvertida() {
    // Agrega un método al prototipo de "String" que devuelva la misma cadena de caracteres, pero invertida.
    // El método debe llamarse "reverse".
    // [PISTA]: necesitarás utilizar el objeto "this".
+
+
+   // Para invertir una cadena (String) utilizaremos 3 metodos de Javascript:
+   // 1 - El método split() divide un string en un array de subcadenas, en función de un separador especificado. El método toma el separador como argumento y devuelve un array que contiene las subcadenas resultantes.
+   // 2 - El método reverse() invierte un arreglo. El primer elemento del arreglo se convierte en el último y el último se convierte en el primero.
+   // 3 - El método join() une todos los elementos de un arreglo en una cadena.
+   // Sitio web de consulta:  https://www.freecodecamp.org/espanol/news/tres-formas-de-invertir-una-cadena-en-javascript/
+
+   String.prototype.reverse = function() {
+      return this.split("").reverse().join("");
+   };
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
