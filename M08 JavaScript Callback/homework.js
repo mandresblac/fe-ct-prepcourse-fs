@@ -5,12 +5,26 @@ function mayuscula(nombre) {
    // Debe devolver el mismo nombre, pero con la primera letra en mayúscula.
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
+   
+   // 1 - Dividimos el nombre (que es un string) en un array de subcadenas con el método split("")
+   let letrasSeparadas = nombre.split("");
+   // 2 - Tomamos el elemeto en la posicion 0 del array "letrasSeparadas" y lo convertimos en en letra mayuscula con el metodo .toUpperCase()
+   let primeraLetraMayuscula = letrasSeparadas[0].toUpperCase();
+   // 3- Eliminamos la primera letra del array "letrasSeparadas" con el metodo .shift()
+   letrasSeparadas.shift();
+   // 4- agregamos "primeraLetraMayuscula" al array "letrasSeparadas" con metodo .unshift()
+   letrasSeparadas.unshift(primeraLetraMayuscula);
+   // 5 - Unimos todos los elementos del arreglo "letrasSeparadas"  de nuevo en una cadena o string
+   let unirLetras = letrasSeparadas.join("");
+   // 6- retornamos unirLetras
+   return unirLetras;
 }
 
 function invocarCallback(cb) {
    // Invoca/ejecuta el callback `cb`.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
+   cb();
 }
 
 function operacionMatematica(num1, num2, cb) {
