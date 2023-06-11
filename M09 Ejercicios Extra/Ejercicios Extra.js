@@ -8,6 +8,7 @@ function deObjetoAarray(objeto) {
    // Tu código:
    let array = [];
 
+   // El bucle "for in" permite recorrer o iterar los atributos o propiedades de un objeto
    for (const clave in objeto) {
       array.push([clave, objeto[clave]]);
    }
