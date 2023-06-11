@@ -6,18 +6,39 @@ function mayuscula(nombre) {
    // [Ejemplo]: "mario" ----> "Mario".
    // Tu código:
    
+   // Opcion 1 de respuesta
    // 1 - Dividimos el nombre (que es un string) en un array de subcadenas con el método split("")
-   let letrasSeparadas = nombre.split("");
+   // let letrasSeparadas = nombre.split("");
    // 2 - Tomamos el elemeto en la posicion 0 del array "letrasSeparadas" y lo convertimos en en letra mayuscula con el metodo .toUpperCase()
-   let primeraLetraMayuscula = letrasSeparadas[0].toUpperCase();
+   // let primeraLetraMayuscula = letrasSeparadas[0].toUpperCase();
    // 3- Eliminamos la primera letra del array "letrasSeparadas" con el metodo .shift()
-   letrasSeparadas.shift();
+   // letrasSeparadas.shift();
    // 4- agregamos "primeraLetraMayuscula" al array "letrasSeparadas" con metodo .unshift()
-   letrasSeparadas.unshift(primeraLetraMayuscula);
+   // letrasSeparadas.unshift(primeraLetraMayuscula);
    // 5 - Unimos todos los elementos del arreglo "letrasSeparadas"  de nuevo en una cadena o string
-   let unirLetras = letrasSeparadas.join("");
+   // let unirLetras = letrasSeparadas.join("");
    // 6- retornamos unirLetras
-   return unirLetras;
+   // return unirLetras;
+
+   // Opcion 2 de respuesta
+   // El metodo .charAt() toma u string y entre el parantesis debeos indicarle la posición o indice del caracter que queremos modificar
+   // El metodo slice() divide un string desde la posicion o indice que le pasemos entre los parentesis
+   // return nombre.charAt(0).toUpperCase() + nombre.slice(1);
+
+   // Opcion 3 de respuesta
+   // El metodo .substring() devuelve una subcadena de un string, divide el string desde la posicion o indice que le pasemos entre los parentesis
+   // return nombre[0].toUpperCase() + nombre.substring(1);
+
+   // Opcion 4 de respuesta
+   let primeraMayuscula = "";
+   for (let i = 0; i < nombre.length; i++) {
+      if (i === 0) {
+         primeraMayuscula += nombre[i].toUpperCase();
+      } else {
+         primeraMayuscula += nombre[i]
+      };
+   }
+   return primeraMayuscula;
 }
 
 function invocarCallback(cb) {
@@ -41,8 +62,17 @@ function sumarArray(arrayOfNumbers, cb) {
    // Este resultado debes pasárselo como argumento al callback recibido.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
-   let suma = arrayOfNumbers.reduce((acumulador, actual) => acumulador + actual, 0);
-   cb(suma);
+
+   // Opcion 1 de respuesta
+   // let suma = arrayOfNumbers.reduce((acumulador, elemento) => acumulador + elemento, 0);
+   // cb(suma);
+
+   // Opcion 2 de respuesta
+   let resultado = 0;
+   for (let i = 0; i < arrayOfNumbers.length; i++) {
+      resultado += arrayOfNumbers[i];
+   }
+   cb(resultado);
 }
 
 function forEach(array, cb) {
@@ -50,7 +80,14 @@ function forEach(array, cb) {
    // Debes iterar sobre el arreglo, y por cada elemento ejecutar el callback.
    // Debes pasarle el elemento como argumento al callback.
    // Tu código:
+
+   // Opcion 1 de respuesta
    array.forEach(cb);
+
+   // Opcion 2 de respuesta
+   // for (let i = 0; i < array.length; i++) {
+   //    cb(array[i]);
+   // }
 }
 
 function map(array, cb) {

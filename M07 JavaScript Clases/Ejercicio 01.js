@@ -28,7 +28,7 @@ function crearUsuario() {
    // return Usuario;
 
 
-   // Opcion 2 de respuesta
+   // Opcion 2 de respuesta - Función constructora
    function Usuario(usuario, nombre, email, password) {
       this.usuario = usuario;
       this.nombre = nombre;
@@ -39,13 +39,16 @@ function crearUsuario() {
    Usuario.prototype.saludar = function() {
       return `Hola, mi nombre es ${this.nombre}`
    }
+
+   // instanciamos un obeto o instancia de la clase Usuario
    const usuario = new Usuario ('Manuel', 'manuel123', 'micorrep@micorreo.com', '1234');
    console.log(usuario);
+
    return Usuario;
 }
 
 function agregarMetodoPrototype(Usuario) {
-   // Agrega un método al prototipo de "U suario".
+   // Agrega un método al prototipo de "Usuario".
    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
    // Tu código:
    Usuario.prototype.saludar = function() {
@@ -65,6 +68,7 @@ function agregarStringInvertida() {
    // 3 - El método join() une todos los elementos de un arreglo en una cadena.
    // Sitio web de consulta:  https://www.freecodecamp.org/espanol/news/tres-formas-de-invertir-una-cadena-en-javascript/
 
+   // Opcion 1 de respuesta
    String.prototype.reverse = function() {
       return this.split("").reverse().join("");
    };
