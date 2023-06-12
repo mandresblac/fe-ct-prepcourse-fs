@@ -191,7 +191,7 @@ function mesesDelAño(array) {
          // Dentro del bucle forEach(), se compara cada elemento (mes) con los meses "Enero", "Marzo" y "Noviembre". 
          array.forEach( mes => {
             if (mes === "Enero" || mes === "Marzo" || mes === "Noviembre") {
-               // Si el elemento coincide con alguno de estos meses, se agrega al arreglo mesesPedidos mediante el método push().
+               // Si el elemento coincide con alguno de estos meses, se agrega al arreglo mesesDesordenados mediante el método push().
                mesesDesordenados.push( mes );
             }
          });      
