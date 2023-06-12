@@ -142,9 +142,7 @@ function sumarLikesDeUsuario(objetoUsuario) {
    // return resultadoLikes;
 
    // Opcion 2 de respuesta
-   let resultadoLikes = objetoUsuario.posts.reduce((acumulador, post) => {
-      return acumulador + post.likes;
-   }, 0);
+   let resultadoLikes = objetoUsuario.posts.reduce((acumulador, post) => acumulador + post.likes, 0);
    return resultadoLikes;
 }
 

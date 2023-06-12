@@ -9,19 +9,19 @@ function mayuscula(nombre) {
    // Opcion 1 de respuesta
    // 1 - Dividimos el nombre (que es un string) en un array de subcadenas con el método split("")
    // let letrasSeparadas = nombre.split("");
-   // 2 - Tomamos el elemeto en la posicion 0 del array "letrasSeparadas" y lo convertimos en en letra mayuscula con el metodo .toUpperCase()
+   // 2 - Tomamos el elemeto en la posicion 0 del array "letrasSeparadas" y lo convertimos en letra mayuscula con el metodo .toUpperCase()
    // let primeraLetraMayuscula = letrasSeparadas[0].toUpperCase();
    // 3- Eliminamos la primera letra del array "letrasSeparadas" con el metodo .shift()
    // letrasSeparadas.shift();
    // 4- agregamos "primeraLetraMayuscula" al array "letrasSeparadas" con metodo .unshift()
    // letrasSeparadas.unshift(primeraLetraMayuscula);
-   // 5 - Unimos todos los elementos del arreglo "letrasSeparadas"  de nuevo en una cadena o string
+   // 5 - Unimos todos los elementos del arreglo "letrasSeparadas"  de nuevo en una cadena o string con el metodo .join("")
    // let unirLetras = letrasSeparadas.join("");
    // 6- retornamos unirLetras
    // return unirLetras;
 
    // Opcion 2 de respuesta
-   // El metodo .charAt() toma u string y entre el parantesis debeos indicarle la posición o indice del caracter que queremos modificar
+   // El metodo .charAt() toma un string y entre el parantesis debemos indicarle la posición o indice del caracter que queremos modificar
    // El metodo slice() divide un string desde la posicion o indice que le pasemos entre los parentesis
    // return nombre.charAt(0).toUpperCase() + nombre.slice(1);
 
@@ -42,7 +42,7 @@ function mayuscula(nombre) {
 }
 
 function invocarCallback(cb) {
-   // Invoca/ejecuta el callback `cb`.
+   // Invoca/ejecuta o llama el callback `cb`.
    // [NOTA]: no debes reotrnar nada.
    // Tu código:
    cb();
@@ -60,7 +60,7 @@ function sumarArray(arrayOfNumbers, cb) {
    // Recibes un arreglo de números y un callback.
    // Suma todos los números del arreglo.
    // Este resultado debes pasárselo como argumento al callback recibido.
-   // [NOTA]: no debes reotrnar nada.
+   // [NOTA]: no debes retornar nada.
    // Tu código:
 
    // Opcion 1 de respuesta
@@ -100,7 +100,7 @@ function map(array, cb) {
 }
 
 function filter(arrayOfStrings) {
-   // Debes identificar todos los elementos el arreglo que comiencen con la letra "a".
+   // Debes identificar todos los elementos del arreglo que comiencen con la letra "a".
    // Luego retorna un nuevo arreglo con estos elementos.
    // Tu código:
    let nuevoArray = arrayOfStrings.filter(elemento => elemento[0] === 'a');
