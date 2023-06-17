@@ -92,7 +92,7 @@ function verificarPassword(objetoUsuario, password) {
 }
 
 function actualizarPassword(objetoUsuario, nuevaPassword) {
-   // Reemplaza la contrseña guardada en la propiedad "password" del "objetoUsuario".
+   // Reemplaza la contraseña guardada en la propiedad "password" del "objetoUsuario".
    // La nueva contraseña la recibes por parámetro.
    // Retornar el objeto.
    // Tu código:

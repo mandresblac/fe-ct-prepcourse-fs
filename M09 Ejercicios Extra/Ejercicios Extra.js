@@ -97,7 +97,7 @@ function capicua(numero) {
    for (let i = numeroAString.length - 1; i >= 0; i--) {
       numeroInvertido += numeroAString[i];
    }
-   // Convertimo de string a numero el "numeroInvertido"
+   // Convertimos de string a numero el "numeroInvertido"
    numeroInvertido = parseInt(numeroInvertido);
 
    return (numero === numeroInvertido) ? "Es capicua" : "No es capicua";

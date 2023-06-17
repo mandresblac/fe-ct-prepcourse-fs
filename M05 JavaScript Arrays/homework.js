@@ -22,11 +22,17 @@ function incrementarPorUno(array) {
    // El arreglo recibido por parámetro contiene números.
    // Retornar un arreglo con los elementos incrementados en +1.
    // Tu código:
-   let nuevoArray = [];
+
+   // Opcion 1 de respuesta
+   /* let nuevoArray = []; // Creamos un nuevo array
    for (let i = 0; i < array.length; i++) {
       nuevoArray.push(array[i] + 1);
    }
+   return nuevoArray; */
 
+   // Opcion 2 de respuesta
+   let nuevoArray = []; // Creamos un nuevo array 
+   array.forEach(num => nuevoArray.push(num + 1));
    return nuevoArray;
 }
 
@@ -236,6 +242,18 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
+   let reaultados = [];
+
+   for (let i = 0; i < 10; i++) {
+      reaultados.push(num += 2);
+
+      // Verificamos si el valor guardado en "resultados" en la posición "i" es igual a "i" (la cantidad de iteraciones actual), Si es así, se interrumpe la ejecución del bucle y se retorna el mensaje "Se interrumpió la ejecución".
+      if(reaultados[i] === i) {
+         return "Se interrumpió la ejecución";
+      }
+   }
+
+   return reaultados;
 }
 
 function continueStatement(num) {
@@ -245,6 +263,18 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+   let resultados = [];
+
+   for (let i = 0; i < 10; i++) {
+      if(i === 5) {
+         continue; // Omite la iteración 5
+      };
+
+      num += 2; // aumentan en 2 el número recibido
+      resultados.push(num); // Otra opcion es: resultados.push(num += 2), pero se debe eliminar la linea anterior num += 2
+   };
+
+   return resultados;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/

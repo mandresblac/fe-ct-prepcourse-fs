@@ -11,7 +11,7 @@ function crearUsuario() {
    // Retornar la clase.
    // Tu código:
 
-   // Opcion 1 de respuesta
+   // Opcion 1 de respuesta - Clases
    // class Usuario {
    //    constructor(usuario, nombre, email, password) {
    //       this.usuario = usuario;
@@ -65,7 +65,7 @@ function agregarStringInvertida() {
    // Para invertir una cadena (String) utilizaremos 3 metodos de Javascript:
    // 1 - El método split() divide un string en un array de subcadenas, en función de un separador especificado. El método toma el separador como argumento y devuelve un array que contiene las subcadenas resultantes.
    // 2 - El método reverse() invierte un arreglo. El primer elemento del arreglo se convierte en el último y el último se convierte en el primero.
-   // 3 - El método join() une todos los elementos de un arreglo en una cadena.
+   // 3 - El método join() une o separa todos los elementos de un arreglo en una cadena.
    // Sitio web de consulta:  https://www.freecodecamp.org/espanol/news/tres-formas-de-invertir-una-cadena-en-javascript/
 
    // Opcion 1 de respuesta
